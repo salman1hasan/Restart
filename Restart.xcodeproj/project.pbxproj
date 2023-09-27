@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C5B6C0992AC35F410094097A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6C0982AC35F410094097A /* OnboardingView.swift */; };
 		C5B6C09B2AC35F670094097A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6C09A2AC35F670094097A /* HomeView.swift */; };
+		C5DB7F532AC48E9300A588DF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB7F522AC48E9300A588DF /* SwiftUIView.swift */; };
+		C5DB7F562AC4916600A588DF /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB7F552AC4916600A588DF /* CircleGroupView.swift */; };
 		C5E741B22AC34FC700C9EE6F /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E741B12AC34FC700C9EE6F /* RestartApp.swift */; };
 		C5E741B42AC34FC700C9EE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E741B32AC34FC700C9EE6F /* ContentView.swift */; };
 		C5E741B62AC34FCA00C9EE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E741B52AC34FCA00C9EE6F /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		C5B6C0952AC35E5C0094097A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C5B6C0982AC35F410094097A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C5B6C09A2AC35F670094097A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C5DB7F522AC48E9300A588DF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		C5DB7F552AC4916600A588DF /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
 		C5E741AE2AC34FC700C9EE6F /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E741B12AC34FC700C9EE6F /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		C5E741B32AC34FC700C9EE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5DB7F542AC48F5400A588DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5DB7F552AC4916600A588DF /* CircleGroupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C5E741A52AC34FC700C9EE6F = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +74,12 @@
 			children = (
 				C5B6C0952AC35E5C0094097A /* Info.plist */,
 				C5E741CA2AC356A700C9EE6F /* Utilities */,
-				C5E741C92AC3567700C9EE6F /* Views */,
 				C5E741C72AC3534700C9EE6F /* Sounds */,
 				C5E741B12AC34FC700C9EE6F /* RestartApp.swift */,
 				C5E741C82AC3564000C9EE6F /* Screens */,
 				C5E741B52AC34FCA00C9EE6F /* Assets.xcassets */,
 				C5E741B72AC34FCA00C9EE6F /* Preview Content */,
+				C5DB7F542AC48F5400A588DF /* Views */,
 			);
 			path = Restart;
 			sourceTree = "<group>";
@@ -75,6 +87,7 @@
 		C5E741B72AC34FCA00C9EE6F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C5DB7F522AC48E9300A588DF /* SwiftUIView.swift */,
 				C5E741B82AC34FCA00C9EE6F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -97,13 +110,6 @@
 				C5B6C09A2AC35F670094097A /* HomeView.swift */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		C5E741C92AC3567700C9EE6F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		C5E741CA2AC356A700C9EE6F /* Utilities */ = {
@@ -189,6 +195,8 @@
 				C5B6C09B2AC35F670094097A /* HomeView.swift in Sources */,
 				C5E741B42AC34FC700C9EE6F /* ContentView.swift in Sources */,
 				C5E741B22AC34FC700C9EE6F /* RestartApp.swift in Sources */,
+				C5DB7F562AC4916600A588DF /* CircleGroupView.swift in Sources */,
+				C5DB7F532AC48E9300A588DF /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
