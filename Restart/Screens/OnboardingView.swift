@@ -11,6 +11,10 @@ struct OnBoardingView: View {
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width-80
+    @State private var buttonOffset:CGFloat = 0
+    
+    
     
     var body: some View {
         ZStack{
@@ -56,31 +60,46 @@ struct OnBoardingView: View {
                         
                         HStack{
                             Capsule()
-                                .fill(Color("ColorRed"))
-                                .frame(width:80)
+                            .fill(Color("ColorRed"))
+                            .frame(width:buttonOffset+80)
                             Spacer()
                         }
                         
                         
-                        HStack{
-                            ZStack{
-                                Circle()
-                                    .fill(Color("ColorRed"))
-                                Circle()
-                                    .fill(.black.opacity(0.15))
-                                    .padding(8)
-                                Image(systemName:"chevron.right.2")
-                                    .font(.system(size:24, weight:.bold))
-                            }
-                            .foregroundColor(.white)
-                            .frame(width:80, height:80, alignment: .center)
-                            .onTapGesture{
-                                isOnboardingViewActive = false
-                            }
-                            Spacer()
+                HStack{
+                    ZStack{
+                        Circle()
+                            .fill(Color("ColorRed"))
+                        Circle()
+                            .fill(.black.opacity(0.15))
+                            .padding(8)
+                        Image(systemName:"chevron.right.2")
+                        .font(.system(size:24,weight:.bold))
                         }
+                        .foregroundColor(.white)
+                        .frame(width:80, height:80, alignment: .center)
+                        .offset(x:buttonOffset)
+            .gesture(
+              DragGesture()
+        .onChanged { gesture in
+                if gesture.translation.width>0 && buttonOffset <=
+                    buttonWidth-80{
+           buttonOffset = gesture.translation.width
                     }
-                    .frame(height:80, alignment:.center)
+                }
+                .onEnded { _ in
+                    if buttonOffset > buttonWidth / 2 {
+                        buttonOffset = buttonWidth-80
+                        isOnboardingViewActive = false
+                    } else {
+                        buttonOffset=0
+                    }
+                }
+            )
+            Spacer()
+            }
+        }
+                    .frame(width: buttonWidth,height:80, alignment:.center)
                     .padding()
                 }
             }
